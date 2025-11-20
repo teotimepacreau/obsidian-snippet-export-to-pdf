@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+@page :left {
+  @bottom-right {
+    content: counter(page);
+    font-family: "Baskervville", serif;
+    --font-print: "Baskervville" !important;
+    --font-text: "Baskervville" !important;
+    font-size: x-small;
+  }
+}
+@page :right {
+  @bottom-right {
+    content: counter(page);
+    font-family: "Baskervville", serif;
+    --font-print: "Baskervville" !important;
+    --font-text: "Baskervville" !important;
+    font-size: x-small;
+  }
+}
+
+@media print {
+    html {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+
+    }
+    body {
+        font-family: "Baskervville", serif !important;
+        --font-print: "Baskervville" !important;
+        --font-text: "Baskervville" !important;
+        text-rendering: optimizeLegibility !important;
+        font-variant-numeric: oldstyle-nums !important;  /*activates lowercase numbers if exists in the OpenType*/
+        font-size: 1rem !important;
+    }
+    
+    h1 {
+        font-weight: 900 !important;
+        font-size: 2.41rem !important;
+        margin-top: 2rlh !important;
+        line-height: 1.2 !important;
+    }
+    
+    h2 {
+        font-weight: 800 !important;
+        font-size: 1.85rem !important;
+        margin-top: 1.5rlh !important;
+        line-height: 1.3 !important;
+    }
+    
+    h3 {
+        font-weight: 700 !important;
+        font-size: 1.55rem !important;
+        margin-top: 1.5rlh !important;
+        line-height: 1.3 !important;
+    }
+
+    h4 {
+        font-weight: 600 !important;
+        font-size: 1.29rem !important;
+        margin-top: 1rlh !important;
+        line-height: 1.3 !important;
+    }
+
+    h1, h2, h3, h4 {
+        letter-spacing: -0.03rem !important;
+    }
+
+    h5 {
+        margin-top: 1rlh !important;
+        font-size: 1rem !important;
+        line-height: 1rlh !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        width: 55%;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+    
+    p,
+    dl,
+    ol,
+    ul, li {
+        font-size: 1rem !important;
+        text-wrap: pretty !important;
+    }
+    
+    p {
+        margin-top: .5rlh !important;
+    }
+
+    table, code, pre, blockquote {
+        font-size: 1rem !important;
+    }
+    
+    blockquote {
+        color: darkslategrey !important;
+    }
+    blockquote p:before {
+        content: open-quote !important;
+    }
+    blockquote p:after {
+        content: close-quote !important;
+    }
+    blockquote p {
+        display: inline !important;
+        width: 55% !important;
+        margin-right: 40px !important;
+    }
+    
+    /* Figures */
+    figure {
+        margin: 1.333rem 0;
+        break-inside: avoid;
+    }
+    
+    figure > img {
+        width: 100%;
+    }
+    
+    figcaption {
+        font-family: var(--sans-serif);
+        font-style: italic;
+        font-size: smaller;
+        margin-top: 0.75rem;
+        counter-increment: figureNumber;
+    }
+        
+    figcaption::before {
+        content: "Fig. "counter(figureNumber)" : ";
+    }
+    
+    /* Tables */
+    table {
+        border-collapse: collapse !important;
+        font-variant-numeric: lining-nums tabular-nums !important;
+    } 
+    
+    th {
+        font-weight: bold !important;
+    }
+    
+    th,td, caption {
+        vertical-align: baseline !important;
+        padding: .7rem !important;
+        text-align: start !important;
+    }
+      
+      
+    caption {
+        background-color: rgba(202, 201, 201, 0.665);
+        font-size: 2.2rem;
+        text-wrap: balance;
+        font-weight: 700;
+    }
+
+    /*Lists*/
+    ol, ul {
+        margin-top: .5rlh !important;
+        list-style-position: outside !important;
+    }
+
+    /* Support for checkboxes in @kepano's minimal theme*/
+    li[data-task="/"]>input:checked::after, input[type=checkbox]:checked::after {
+        background-color: black
+    }
+
+    input[type=checkbox]:checked {
+        background: none
+    }
+
+    ul>li.task-list-item[data-task="x"] {
+        color: black
+    }
+
+    li[data-task="!"]>input:checked::after,
+    li[data-task="*"]>input:checked::after,
+    li[data-task='"']>input:checked::after,
+    li[data-task="l"]>input:checked::after,
+    li[data-task="b"]>input:checked::after,
+    li[data-task="i"]>input:checked::after,
+    li[data-task="S"]>input:checked::after,
+    li[data-task="I"]>input:checked::after,
+    li[data-task="p"]>input:checked::after,
+    li[data-task="c"]>input:checked::after,
+    li[data-task="f"]>input:checked::after,
+    li[data-task="k"]>input:checked::after,
+    li[data-task="w"]>input:checked::after,
+    li[data-task="u"]>input:checked::after,
+    li[data-task="d"]>input:checked::after,
+    li[data-task="?"]>input:checked::after {
+        background: none !important;
+        -webkit-mask-image: none !important
+    }
+
+    /* Images*/
+    img {
+        margin-top: 1.4rem;
+    }
+
+    /* PAGE BREAKS */
+    ul, ol, li {
+        page-break-inside: avoid; 
+  	}
+
+  	li {
+        page-break-inside: avoid; 		
+  	}
+
+	table {
+    	break-inside: avoid;
+    	page-break-inside: avoid;
+        break-before: page;
+    }
+
+	blockquote {
+	    break-inside: avoid;
+	    page-break-inside: avoid;
+	}
+    	
+}

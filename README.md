@@ -1,6 +1,7 @@
 # Features
 - Type scale system on Minor Third for h1 to h5
 - Classic serif Baskervville for work-compatible documents
+- Automatic pagination
 
 # Obsidian & the hidden customization of CSS snippets in order to control PDF export formatting
 

@@ -1,3 +1,7 @@
+# Features
+- Type scale system on Minor Third for h1 to h5
+- Classic serif Baskervville for work-compatible documents
+
 # Obsidian & the hidden customization of CSS snippets in order to control PDF export formatting
 
 Obsidian is great, not documenting [hidden CSS customization is not](https://forum.obsidian.md/t/pdf-export-font-style-always-glitches/55008/26) [@kepano](https://www.github.com/kepano)

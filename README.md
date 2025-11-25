@@ -1,5 +1,5 @@
 # Features
-- Type scale system on Minor Third for h1 to h5
+- Type scale system based on [vertical rythm best practices](https://www.teotimepacreau.fr/blog/rythme-vertical-css/) on a Minor Third modulo for h1 to h5
 - Classic serif Baskervville for work-compatible documents
 - Automatic pagination
 

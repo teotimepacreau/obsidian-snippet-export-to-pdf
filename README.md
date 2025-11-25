@@ -2,6 +2,7 @@
 - Type scale system based on [vertical rythm best practices](https://www.teotimepacreau.fr/blog/rythme-vertical-css/) on a Minor Third modulo for h1 to h5
 - Classic serif Baskervville for work-compatible documents
 - Automatic pagination
+- Blockquotes
 
 # Obsidian & the hidden customization of CSS snippets in order to control PDF export formatting
 

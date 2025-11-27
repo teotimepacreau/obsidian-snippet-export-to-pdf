@@ -85,7 +85,6 @@
     }
     
     p, dl, li {
-        font-weight: 500 !important;
         text-wrap: pretty !important;
     }
     
@@ -213,3 +212,4 @@
 	    page-break-inside: avoid;
 	}	
 }
+

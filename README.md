@@ -1,6 +1,7 @@
 # Features
 - Type scale system based on [vertical rythm best practices](https://www.teotimepacreau.fr/blog/rythme-vertical-css/) on a Minor Third modulo for h1 to h5
-- Classic serif Baskervville for work-compatible documents
+- Classic serif style for work-compatible documents
+- Typography best practices : lowercase numbers, `all-small-caps` for caps titles, `tabular-nums` for tables...
 - Automatic pagination
 - Blockquotes
 
